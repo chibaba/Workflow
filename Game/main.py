@@ -13,7 +13,7 @@ winner = None
 
 # who's turn is it
 current_player = "X"
- 
+    # display board
 def display_board():
     print(board[0] + " | " + board[1] + " + board[2]")
     print(board[3] + " | " + board[4] + " + board[5]")
@@ -21,17 +21,25 @@ def display_board():
     
 def play_game():
 
-# display initial board
+    # display initial board
     display_board()
-    
+    # while the game is still on session
     while game_still_going:
+        
+    # handle A single turn of an arbitrary player    
         handle_turn(current_player)
         
+    # check if the game has ended    
         check_if_game_over()
+    
+    #Flip to the other player
+    flip_player()
         
-        flip_player()
-
-    handle_turn()
+    # the game has ended
+    if  winner == "XX" or winner== "0":
+        print(winner + "won.")
+    elif winner == None:
+        print("Tie.")
     
 def handle_turn(player):
     position = input("choose a position from 1-9: ")
