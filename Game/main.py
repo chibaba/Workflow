@@ -1,6 +1,18 @@
+# ======== Global Variable =======
+
 board = ["-", "-", "-",
          "-", "-", "-",
          "-", "-", "-"]
+
+# if game is still going
+game_still_going = True
+
+# who won? or tie?
+
+winner = None
+
+# who's turn is it
+current_player = "X"
  
 def display_board():
     print(board[0] + " | " + board[1] + " + board[2]")
@@ -35,5 +47,12 @@ def check_if_game_over():
 def check_if_win():
     # check rows
     # check column
+    # check_diagonals
+    return
+def check_if_tie():
+    return
+
+def flip_player():
+    return
     
     play_game()
