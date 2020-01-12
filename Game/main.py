@@ -33,7 +33,7 @@ def play_game():
 
     handle_turn()
     
-def handle_turn():
+def handle_turn(player):
     position = input("choose a position from 1-9: ")
     position = int(position) -1
     
