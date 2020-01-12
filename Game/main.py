@@ -11,6 +11,13 @@ def play_game():
 
 # display initial board
     display_board()
+    
+    while game_still_going:
+        handle_turn(current_player)
+        
+        check_if_game_over()
+        
+        flip_player()
 
     handle_turn()
     
@@ -20,5 +27,13 @@ def handle_turn():
     
     board[position] = "X"
     display_board()
+    
+def check_if_game_over():
+    check_if_win()
+    check_if_tie()
+
+def check_if_win():
+    # check rows
+    # check column
     
     play_game()
