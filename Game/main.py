@@ -40,7 +40,7 @@ def play_game():
         print(winner + "won.")
     elif winner == None:
         print("Tie.")
-    
+    # handle a single turn of an arbitarary player
 def handle_turn(player):
     position = input("choose a position from 1-9: ")
     position = int(position) -1
