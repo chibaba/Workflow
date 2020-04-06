@@ -20,6 +20,46 @@ class Employee():
         print("Salary :"+str(self.Salary))
         print("---------------------------")
         
+class Programmer(Employee):
+    def __init__(self, name, id_gen, lang=None,
+                 db=None, projects=None, **add_skills):
+        self.languages=lang
+        self.db=db
+        self.projects=projects
+        self.add_skills=add_skills
+        super().__init__(name,id_gen)
+    def printSkillDetails(self):
+        print("ID : " +str(self.Id))
+        print("Name: " +str(self.Name))
+        print("Salary : " +str(self.Salary))
+        print("Languages : ")
+        for l in self.languages:
+            print("\t" +str(l))
+        print("Databases : ")
+        for d in self.db:
+            print("\t" +str(d))
+        print("projects : ")
+        for p in self.projects:
+            print("/t" +str(p))
+        print("Add skill : ")
+        for k,v in self.add_skills.items():
+            print("\t" +str(k) +" : ")
+            for skill in v :
+                print("\t\t"+str(skill))
+                
+Id_gen=Id_Generator()
+p=Programmer("Programmer1", Id_gen, ["C","C++", "java",
+                                     "python",  "vb"],
+             ["mysql","sql server","oracle"],
+             ["PT Framework","web scanning Framework",
+              "SOC Orchestration Framework"],
+             os=["windows","centos","kali"],
+             nosql=["mongo db", "redis","rabbit mq","basex"],
+             data_science=["machine learning", "AI",
+                           "Regression Models", "Classification Models",
+                           "Clustering","Neural Networks","NLP"])
+p.printSkillsDetails()
+                
 Id_gen=Id_Generator()
 emp1=Employee("Emp1",Id_gen)
 emp1.Salary= 20000
