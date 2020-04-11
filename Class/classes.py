@@ -58,9 +58,8 @@ p=Programmer("Programmer1", Id_gen, ["C","C++", "java",
              data_science=["machine learning", "AI",
                            "Regression Models", "Classification Models",
                            "Clustering","Neural Networks","NLP"])
-p.printSkillsDetails()
-                
 Id_gen=Id_Generator()
+p.printSkillsDetails()
 emp1=Employee("Emp1",Id_gen)
 emp1.Salary= 20000
 emp1.D_id=2
