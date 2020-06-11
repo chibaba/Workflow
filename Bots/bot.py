@@ -21,3 +21,10 @@ elif 7 <=scale <=8:
     print("You must be getting the ladies")
     print("How often do you get a new crush in a day?")
     response = abs(int(input()))
+    if 1 <= response <=5:
+        print("You are the mordern-day absalom ")
+    else:
+        print("Are you sure you are  human?")
+        print("How many seconds can you type 3 words")
+        response = abs(int(input()))
+        print("chibaba")
