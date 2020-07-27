@@ -23,3 +23,9 @@ for employee in employees:
     print('-' * 20)
 
     # Lastly, if we were to print the details of Lisa Crawford, we would need to use the indexing method. Lisa's record is in position 1, so we would write:
+    employee = employees[1]
+print(employee)
+print("Name:", employee[0])
+print("Age:", employee[1])
+print("Department:", employee[2])
+print('-' * 20)
