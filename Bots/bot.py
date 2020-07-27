@@ -22,7 +22,7 @@ elif 7 <=scale <=8:
     print("How often do you get a new crush in a day?")
     response = abs(int(input()))
     if 1 <= response <=5:
-        print("You are the mordern-day absalom ")
+        print("You are the modern-day absalom ")
     else:
         print("Are you sure you are  human?")
         print("How many seconds can you type 3 words")
